@@ -1,0 +1,14 @@
+{
+  "extends": "eslint-config-airbnb",
+  "plugins": [
+    "jest"
+  ],
+  "rules": {
+    "semi": "off",
+    "quotes": "off",
+    "react/jsx-filename-extension": "off",
+  },
+  "globals": {
+    "document": "writable"
+  }
+}
