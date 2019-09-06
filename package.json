@@ -1,7 +1,7 @@
 {
   "name": "hello-world",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://adamsiekierski.github.io/hello-world",
   "dependencies": {
     "eslint-config-airbnb": "^18.0.1",
     "eslint-plugin-jsx-a11y": "^6.2.3",
