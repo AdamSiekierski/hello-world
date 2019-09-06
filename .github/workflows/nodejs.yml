@@ -21,14 +21,10 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - name: npm install, build, and test
-      run: |
-        npm install
-        npm run build
-      env:
-        CI: true
-    - name: GitHub Pages Deploy
-      uses: maxheld83/ghpages@v0.2.1
-      env:
-        BUILD_DIR: /build
-        GH_PAT: ${{ secrets.GH_PAT }}
+    - name: Build and Deploy
+        uses: JamesIves/github-pages-deploy-action@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.GH_PAT }}
+          BRANCH: gh-pages
+          FOLDER: dist
+          BUILD_SCRIPT: npm install && npm run build
